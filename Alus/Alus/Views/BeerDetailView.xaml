@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Alus.Views.BeerDetailView"
+    Title="{Binding BeerName}">
+    <ContentPage.Content>
+        <StackLayout>       
+            <Grid>
+                <Label Text="BeerId" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="{Binding BeerId}" Grid.Row="0" Grid.Column="1" />
+                
+                <Label Text="Beer name:" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="{Binding BeerName}" Grid.Row="1" Grid.Column="1" />
+                
+                <Label Text="Beer type:" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="{Binding BeerType}" Grid.Row="2" Grid.Column="1" />
+                
+                <Label Text="Beer producer:" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="{Binding BeerProducer}" Grid.Row="3" Grid.Column="1" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
