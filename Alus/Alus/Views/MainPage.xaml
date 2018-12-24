@@ -6,16 +6,25 @@
 
     <TabbedPage.Children>
         <NavigationPage Title="Users">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="usericon" />
+                </OnPlatform>
+            </NavigationPage.Icon>
             <x:Arguments>
                 <local:UsersView />
             </x:Arguments>
         </NavigationPage>
         
         <NavigationPage Title="Beers">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="beericon" />
+                </OnPlatform>
+            </NavigationPage.Icon>
             <x:Arguments>
                 <local:BeersView />
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>
-
 </TabbedPage>
