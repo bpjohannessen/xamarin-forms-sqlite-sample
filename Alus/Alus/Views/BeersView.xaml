@@ -6,14 +6,14 @@
     Title="Beers">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ListViewBeers" RowHeight="60" ItemTapped="ListViewBeers_Tapped">
+            <ListView x:Name="ListViewBeers" ItemTapped="ListViewBeers_Tapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout>
-                                <Label Text="{Binding BeerName}" Font="15,Bold" />
-                                <Label Text="{Binding BeerProducer}" />
-                            </StackLayout>
+                            <Grid>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding BeerName}" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding ProducerName}" />
+                            </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

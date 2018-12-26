@@ -12,7 +12,7 @@ namespace Alus.Views
         {
             InitializeComponent();
 
-            List<ABeer> beers = ABeers.GetAll();
+            List<ABeer> beers = ABeers.GetBeers();
 
             ListViewBeers.ItemsSource = beers;
         }

@@ -11,5 +11,6 @@ namespace Alus.Models
         public string BeerName { get; set; }
         public string BeerProducer { get; set; }
         public string BeerType { get; set; }
+        public string ProducerName { get; set; }
     }
 }
