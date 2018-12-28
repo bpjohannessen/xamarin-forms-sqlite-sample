@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Alus.Helpers;
 using Alus.Models;
+using Alus.ViewModels;
 using Xamarin.Forms;
 
 namespace Alus.Views

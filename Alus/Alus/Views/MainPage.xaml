@@ -26,5 +26,16 @@
                 <local:BeersView />
             </x:Arguments>
         </NavigationPage>
+        
+        <NavigationPage Title="Producers">
+            <NavigationPage.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS" Value="beericon" />
+                </OnPlatform>
+            </NavigationPage.Icon>
+            <x:Arguments>
+                <local:ProducersView />
+            </x:Arguments>
+        </NavigationPage>
     </TabbedPage.Children>
 </TabbedPage>

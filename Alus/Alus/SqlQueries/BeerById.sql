@@ -1,0 +1,1 @@
+﻿SELECT * FROM [ABeer] WHERE BeerId = @id
