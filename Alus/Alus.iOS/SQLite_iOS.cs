@@ -16,6 +16,8 @@ namespace Alus.iOS
 
         //private static bool _initiated = false;
 
+        // Place the sqlite file in the Resources directory (Alus.iOS/Resources)
+
         #region ISQLite implementation
         public SQLite.SQLiteConnection GetConnection()
         {

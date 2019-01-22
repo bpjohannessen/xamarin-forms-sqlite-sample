@@ -4,18 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Alus.Views.UsersView"
     Title="Users">
-    
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ListViewUsers" ItemTapped="ListViewUsers_Tapped" RowHeight="60">
+            <ListView x:Name="ListViewUsers" ItemTapped="ListViewUsers_Tapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout>
-                                <Label Text="{Binding UserName}" Font="15,Bold" />
-                                <Label Text="{Binding UserEmail}" />
-                            </StackLayout>
-                        </ViewCell>
+                        <TextCell Text="{Binding UserName}" Detail="{Binding UserEmail}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

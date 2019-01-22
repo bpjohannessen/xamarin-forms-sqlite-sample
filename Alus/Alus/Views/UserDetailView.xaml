@@ -8,6 +8,15 @@
         <Grid>
             <Label Text="User id:" FontAttributes="Bold" Grid.Row="0" Grid.Column="0" />
             <Label Text="{Binding UserId}" Grid.Row="0" Grid.Column="1" />
+            
+            <Label Text="Username:" FontAttributes="Bold" Grid.Row="1" Grid.Column="0" />
+            <Label Text="{Binding UserName}" Grid.Row="1" Grid.Column="1" />
+            
+            <Label Text="User e-mail:" FontAttributes="Bold" Grid.Row="2" Grid.Column="0" />
+            <Label Text="{Binding UserEmail}" Grid.Row="2" Grid.Column="1" />
+            
+            <Label Text="User phone:" FontAttributes="Bold" Grid.Row="3" Grid.Column="0" />
+            <Label Text="{Binding UserPhone}" Grid.Row="3" Grid.Column="1" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

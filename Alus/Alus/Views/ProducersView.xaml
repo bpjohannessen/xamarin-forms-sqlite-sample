@@ -5,15 +5,10 @@
     x:Class="Alus.Views.ProducersView"
     Title="Producers">
     <ContentPage.Content>
-        <ListView x:Name="ListViewProducers" ItemTapped="ListViewProducers_Tapped" RowHeight="60">
+        <ListView x:Name="ListViewProducers" ItemTapped="ListViewProducers_Tapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding ProducerName}" FontAttributes="Bold" />
-                            <Label Text="{Binding ProducerCountry}" />
-                        </StackLayout>
-                    </ViewCell>
+                    <TextCell Text="{Binding ProducerName}" Detail="{Binding ProducerCountry}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

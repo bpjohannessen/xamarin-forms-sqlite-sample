@@ -12,9 +12,9 @@ namespace Alus.Views
         {
             InitializeComponent();
 
-            List<ABeer> beers = ABeers.GetBeers();
+            List<ABeer> allBeers = ABeers.GetBeers();
 
-            ListViewBeers.ItemsSource = beers;
+            ListViewBeers.ItemsSource = allBeers;
         }
 
         async void ListViewBeers_Tapped(object sender, ItemTappedEventArgs e)

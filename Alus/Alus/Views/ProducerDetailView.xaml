@@ -5,14 +5,14 @@
     x:Class="Alus.Views.ProducerDetailView"
     Title="{Binding ProducerName}">
     <ContentPage.Content>
-        <ListView x:Name="ListViewProducerDetail">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Label Text="{Binding BeerName}" />
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <StackLayout>       
+            <Grid>
+                <Label Text="Producer id" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="{Binding ProducerId}" Grid.Row="0" Grid.Column="1" />
+                
+                <Label Text="Producer name:" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="{Binding ProducerName}" Grid.Row="1" Grid.Column="1" />
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

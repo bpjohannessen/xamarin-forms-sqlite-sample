@@ -11,47 +11,30 @@ namespace Alus
 {
     public partial class App : Application
     {
+        public string IsFirstTime
+        {
+            get { return Settings.GeneralSettings; }
+            set
+            {
+                if (Settings.GeneralSettings == value) return;
+                Settings.GeneralSettings = value;
+                OnPropertyChanged();
+            }
+        }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
-
-            //InitializeComponent();
-
-            //MainPage = new MainPage();
-
-            //Create some sample data
-            //NLUsers.CreateSampleData();
-            //List<AUser> users = AUsers.GetAll();
-
-            // OLD
-            //
-            //
-            //
-
-            ////Create a list bound to the data
-            //var template = new DataTemplate(typeof(TextCell));
-            //template.SetBinding(TextCell.TextProperty, "UserName");
-
-            //ListView listUsers = new ListView()
-            //{
-            //    //ItemsSource = users,
-            //    ItemTemplate = template
-            //};
-
-
-            //// The root page of your application
-            //MainPage = new ContentPage
-            //{
-            //    Content = new StackLayout
-            //    {
-            //        VerticalOptions = LayoutOptions.Center,
-            //        Children = {
-            //            listUsers
-            //        }
-            //    }
-            //};
+            if(IsFirstTime == "yes")
+            {
+                IsFirstTime = "no";
+                MainPage = new FirstTimeView();
+            }
+            else
+            {
+                MainPage = new MainPage();
+            }
         }
 
         protected override void OnStart()

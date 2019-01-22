@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Alus.Views.FirstTimeView">
+    <ContentPage.Content>
+        <StackLayout Padding="20,50,20,20">
+            <Label Text="Hello and welcome to this nice app. This will only be shown the first time you open the app" />
+            <Button Text="I understand!" Clicked="Handle_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

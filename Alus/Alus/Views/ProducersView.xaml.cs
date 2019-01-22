@@ -20,40 +20,10 @@ namespace Alus.Views
         {
             ListViewProducers.SelectedItem = null;
 
-            AProducer TappedProducer = e.Item as AProducer;
-
-            if (TappedProducer == null) return;
-            int teste = TappedProducer.ProducerId;
-
-            await this.Navigation.PushAsync(new ProducerDetailView(TappedProducer.ProducerId)
+            await Navigation.PushAsync(new ProducerDetailView()
             {
-                //BindingContext = e.Item as ABeer
+                BindingContext = e.Item as AProducer
             });
-            //await Navigation.PushAsync(new ProducerDetailView
-            //{
-            //    BindingContext = e.Item as AProducer
-            //});
-
-            //
-            //int id = item.BeerId;
-            //string BeerName = item.BeerName;
-
-            //var SelectedBeer = e.Item as ABeer;
-            //var BId = SelectedBeer.BeerId;
-            //var stId = BId.ToString();
-            
-            //ListViewProducers.SelectedItem = null;
-            //await DisplayAlert("OK", Convert.ToString(SelectedBeer.BeerId), "OK");
-            ////await Navigation.PushAsync(new ProducerDetailView(SelectedBeer.BeerId));
         }
     }
 }
-
-//async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
-//{
-    //Fabric tappedFabric = e.Item as Fabric;
-
-    //if (tappedFabric == null)
-    //    return;
-
-    //await this.Navigation.PushModalAsync(new ItemDetailsPage(tappedFabric));
